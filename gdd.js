@@ -911,6 +911,142 @@ const sec7 = [
 ];
 
 // ============================================================
+// SECTION 8 - BUSINESS MANAGER & ASSETS
+// ============================================================
+const sec8 = [
+  pageBreak(),
+  sectionBanner("القسم الثامن: Business Manager والأصول (Assets)"),
+  h1("8. إدارة Business Manager (BM)"),
+  h2("8.1 حسابات الأعمال (Business Accounts)"),
+  body("الـ Business Manager هو المظلة التي تجمع الحسابات الإعلانية، الصفحات، البيكسلات، والأشخاص."),
+  new Table({
+    width: { size: W, type: WidthType.DXA },
+    columnWidths: [3000, 2000, 4360],
+    rows: [
+      new TableRow({ children: [hdrCell("الحقل", 3000), hdrCell("النوع", 2000), hdrCell("الوصف", 4360)] }),
+      new TableRow({ children: [dataCell("id", 3000, GRAY_BG), dataCell("string", 2000, GRAY_BG), dataCell("معرف مدير الأعمال", 4360, GRAY_BG)] }),
+      new TableRow({ children: [dataCell("name", 3000), dataCell("string", 2000), dataCell("اسم النشاط التجاري", 4360)] }),
+      new TableRow({ children: [dataCell("verification_status", 3000, GRAY_BG), dataCell("enum", 2000, GRAY_BG), dataCell("حالة توثيق النشاط (verified, unverified)", 4360, GRAY_BG)] }),
+      new TableRow({ children: [dataCell("creation_time", 3000), dataCell("datetime", 2000), dataCell("تاريخ إنشاء الحساب", 4360)] }),
+    ]
+  }),
+  h2("8.2 الصفحات وحسابات انستغرام وواتساب"),
+  new Table({
+    width: { size: W, type: WidthType.DXA },
+    columnWidths: [3000, 2000, 4360],
+    rows: [
+      new TableRow({ children: [hdrCell("المورد", 3000), hdrCell("API Endpoint", 2000), hdrCell("الاستخدام المتاح", 4360)] }),
+      new TableRow({ children: [dataCell("Facebook Pages", 3000, GRAY_BG), dataCell("/{business_id}/owned_pages", 2000, GRAY_BG), dataCell("جلب صفحات فيسبوك، نشر محتوى، استخدامها في الإعلانات", 4360, GRAY_BG)] }),
+      new TableRow({ children: [dataCell("Instagram Accounts", 3000), dataCell("/{business_id}/instagram_accounts", 2000), dataCell("جلب حسابات انستغرام وربطها بالصفحات للإعلانات", 4360)] }),
+      new TableRow({ children: [dataCell("WhatsApp Business", 3000, GRAY_BG), dataCell("/{business_id}/whatsapp_business_accounts", 2000, GRAY_BG), dataCell("جلب أرقام واتساب للأعمال لاستخدامها في إعلانات Click-to-WhatsApp", 4360, GRAY_BG)] }),
+    ]
+  }),
+];
+
+// ============================================================
+// SECTION 9 - ADVANCED TRACKING & CATALOGS
+// ============================================================
+const sec9 = [
+  pageBreak(),
+  sectionBanner("القسم التاسع: التتبع المتقدم والكتالوجات"),
+  h1("9. Pixels & Conversions API (CAPI)"),
+  h2("9.1 Facebook Pixels"),
+  new Table({
+    width: { size: W, type: WidthType.DXA },
+    columnWidths: [3000, 2000, 4360],
+    rows: [
+      new TableRow({ children: [hdrCell("الخاصية / الحقل", 3000), hdrCell("النوع", 2000), hdrCell("الوصف", 4360)] }),
+      new TableRow({ children: [dataCell("id", 3000, GRAY_BG), dataCell("string", 2000, GRAY_BG), dataCell("معرف البيكسل", 4360, GRAY_BG)] }),
+      new TableRow({ children: [dataCell("name", 3000), dataCell("string", 2000), dataCell("اسم البيكسل", 4360)] }),
+      new TableRow({ children: [dataCell("rules", 3000, GRAY_BG), dataCell("object", 2000, GRAY_BG), dataCell("قواعد Custom Conversions", 4360, GRAY_BG)] }),
+    ]
+  }),
+  body("سيدعم التطبيق مستقبلاً إرسال الأحداث مباشرة من السيرفر باستخدام Conversions API (CAPI) لضمان دقة التتبع مع تحديثات الخصوصية (iOS 14+)."),
+  
+  h1("10. Product Catalogs"),
+  body("دعم كامل لإدارة الكتالوجات (Product Feeds) لاستخدامها في إعلانات DPA."),
+  new Table({
+    width: { size: W, type: WidthType.DXA },
+    columnWidths: [3000, 2000, 4360],
+    rows: [
+      new TableRow({ children: [hdrCell("المورد", 3000), hdrCell("Endpoint", 2000), hdrCell("الوصف", 4360)] }),
+      new TableRow({ children: [dataCell("Catalogs", 3000, GRAY_BG), dataCell("/{business_id}/product_catalogs", 2000, GRAY_BG), dataCell("إنشاء وجلب الكتالوجات", 4360, GRAY_BG)] }),
+      new TableRow({ children: [dataCell("Product Sets", 3000), dataCell("/{catalog_id}/product_sets", 2000), dataCell("مجموعات المنتجات المفلترة (مثال: أحذية رياضية أقل من 50$)", 4360)] }),
+      new TableRow({ children: [dataCell("Products", 3000, GRAY_BG), dataCell("/{catalog_id}/products", 2000, GRAY_BG), dataCell("المنتجات الفردية، أسعارها، صورها، وحالتها (متوفر/نفذ)", 4360, GRAY_BG)] }),
+    ]
+  }),
+];
+
+// ============================================================
+// SECTION 10 - ULTIMATE CROSS-PLATFORM ROADMAP
+// ============================================================
+const sec10 = [
+  pageBreak(),
+  sectionBanner("القسم العاشر: خطة الهيمنة الشاملة للتطبيق"),
+  h1("11. الخطط المستقبلية لكل المنصات"),
+  h2("11.1 منصات التحكم (Control Planes)"),
+  body("سيصبح التطبيق النظام المركزي الشامل لإدارة الإعلانات، متخطياً قيود واجهة فيسبوك التقليدية، من خلال توفير نقطة وصول تناسب كل حالة استخدام:"),
+  bullet("1. الويب (Web Dashboard): الواجهة الرئيسية للمديرين والـ Media Buyers للتحليل العميق والـ Bulk Actions."),
+  bullet("2. تطبيق الديسكتوب (Desktop App): يعمل في الخلفية (System Tray)، تنبيهات لحظية للصرف الزائد، أسرع في الأداء باستهلاك أقل للرام."),
+  bullet("3. تطبيق الموبايل (Mobile App): للتحكم الطارئ (إيقاف حملة، زيادة ميزانية، التحقق من العائد ROAS) وأنت بعيد عن مكتبك."),
+  bullet("4. إضافة المتصفح (Browser Extension): تظهر إحصائيات سريعة للبيكسل في موقعك، وتحليل إعلانات المنافسين (Ad Library Analyzer)."),
+  bullet("5. أداة سطر الأوامر (CLI Tool): للمطورين لأتمتة إنشاء مئات الحملات باستخدام سكريبتات أو ملفات CSV."),
+  bullet("6. الـ MCP Server (Claude Integration): التحكم بالحملات وتوليد تقارير وسؤال أسئلة عن الأداء باللغة الطبيعية!"),
+  
+  h2("11.2 الأتمتة المتقدمة (Automated Rules Engine)"),
+  body("النظام القادم سيمتلك محرك قواعد متقدم يعمل على السيرفر الخاص بنا (وليس قواعد فيسبوك المحدودة):"),
+  bullet("Stop-Loss Rules: إيقاف الإعلان إذا صرف 20$ بدون أي مبيعات."),
+  bullet("Scale Rules: زيادة الميزانية 20% يومياً إذا كان الـ ROAS أعلى من 3.0."),
+  bullet("Dayparting: تفعيل الإعلانات وإيقافها في ساعات محددة بناءً على الوقت الأكثر ربحية."),
+  bullet("Weather-Based Ads: تفعيل إعلانات معينة بناءً على حالة الطقس في المنطقة المستهدفة (باستخدام Weather API)."),
+
+  h2("11.3 الذكاء الاصطناعي (AI Capabilities)"),
+  bullet("توليد الـ Creatives: استخدام AI لتوليد نصوص إعلانية وصور بديلة للحملات الخاسرة."),
+  bullet("Predictive Analytics: توقع الأداء المستقبلي للحملة بناءً على بيانات أول 24 ساعة."),
+  bullet("Audience Generator: اكتشاف اهتمامات خفية (Hidden Interests) غير مقترحة في واجهة فيسبوك."),
+];
+
+// ============================================================
+// SECTION 11 - WEBHOOKS & REAL-TIME UPDATES
+// ============================================================
+const sec11 = [
+  pageBreak(),
+  sectionBanner("القسم الحادي عشر: التحديثات اللحظية (Webhooks)"),
+  h1("12. Facebook Webhooks"),
+  body("لتحقيق أصغر تحكم ممكن، سيعتمد التطبيق على Webhooks لاستقبال التحديثات فور حدوثها على فيسبوك دون الحاجة لعمل Polling مستمر."),
+  new Table({
+    width: { size: W, type: WidthType.DXA },
+    columnWidths: [3000, 2000, 4360],
+    rows: [
+      new TableRow({ children: [hdrCell("الموضوع (Topic)", 3000), hdrCell("الحدث (Event)", 2000), hdrCell("الوصف والاستخدام", 4360)] }),
+      new TableRow({ children: [dataCell("ad_account", 3000, GRAY_BG), dataCell("account_status", 2000, GRAY_BG), dataCell("تنبيه فوري إذا تم تعطيل الحساب الإعلاني", 4360, GRAY_BG)] }),
+      new TableRow({ children: [dataCell("campaign", 3000), dataCell("status", 2000), dataCell("تحديث حالة الحملة في واجهة التطبيق فوراً", 4360)] }),
+      new TableRow({ children: [dataCell("leadgen", 3000, GRAY_BG), dataCell("leads", 2000, GRAY_BG), dataCell("استقبال بيانات الـ Leads فور قيام المستخدم بملء الفورم لإرسالها للـ CRM", 4360, GRAY_BG)] }),
+    ]
+  }),
+];
+
+// ============================================================
+// SECTION 12 - LEAD GENERATION & DETAILED CONTROL
+// ============================================================
+const sec12 = [
+  pageBreak(),
+  sectionBanner("القسم الثاني عشر: تفاصيل إضافية وتحكم أدق"),
+  h1("13. Lead Generation API"),
+  body("يتيح فيسبوك سحب بيانات العملاء المحتملين مباشرة."),
+  new Table({
+    width: { size: W, type: WidthType.DXA },
+    columnWidths: [3000, 2000, 4360],
+    rows: [
+      new TableRow({ children: [hdrCell("الحقل", 3000), hdrCell("النوع", 2000), hdrCell("الوصف", 4360)] }),
+      new TableRow({ children: [dataCell("id", 3000, GRAY_BG), dataCell("string", 2000, GRAY_BG), dataCell("معرف الـ Lead", 4360, GRAY_BG)] }),
+      new TableRow({ children: [dataCell("created_time", 3000), dataCell("datetime", 2000), dataCell("وقت إنشاء الطلب", 4360)] }),
+      new TableRow({ children: [dataCell("field_data", 3000, GRAY_BG), dataCell("array", 2000, GRAY_BG), dataCell("البيانات المعبأة (الاسم، الهاتف، الإيميل...)", 4360, GRAY_BG)] }),
+    ]
+  }),
+];
+
+// ============================================================
 // ASSEMBLE
 // ============================================================
 const doc = new Document({
@@ -974,7 +1110,7 @@ const doc = new Document({
             children: [
               new TextRun({ text: "Facebook Ads Multi-Platform Manager  |  GDD v1.0", size: 16, color: TEXT_MID, font: "Arial" }),
               new TextRun({ text: "  ·  صفحة ", size: 16, color: TEXT_MID, font: "Arial" }),
-              new TextRun({ children: [new PageNumber()], size: 16, color: TEXT_MID, font: "Arial" }),
+              new TextRun({ children: [PageNumber.CURRENT], size: 16, color: TEXT_MID, font: "Arial" }),
             ]
           })]
         })
@@ -999,13 +1135,13 @@ const doc = new Document({
           headingStyleRange: "1-3",
         }),
         pageBreak(),
-        ...sec1, ...sec2, ...sec3, ...sec4, ...sec5, ...sec6, ...sec7
+        ...sec1, ...sec2, ...sec3, ...sec4, ...sec5, ...sec6, ...sec7, ...sec8, ...sec9, ...sec10, ...sec11, ...sec12
       ]
     }
   ]
 });
 
 Packer.toBuffer(doc).then(buffer => {
-  fs.writeFileSync("/mnt/user-data/outputs/Facebook_Ads_GDD_v1.0.docx", buffer);
+  fs.writeFileSync("D:\\facebook_ads\\Facebook_Ads_GDD_v1.0.docx", buffer);
   console.log("DONE: Facebook_Ads_GDD_v1.0.docx written successfully");
 }).catch(err => { console.error("ERROR:", err); process.exit(1); });
