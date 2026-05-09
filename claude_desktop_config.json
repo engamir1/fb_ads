@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "d:\\facebook_ads"
+      ]
+    },
+    "facebook-ads": {
+      "command": "C:\\Python313\\python.exe",
+      "args": [
+        "d:\\facebook_ads\\fb-mcp-server\\server.py",
+        "--fb-token",
+        "EAAb8rNYkc3ABRY0SQRdJUeozYHwj0HWV2Ghfmlf9H1431bBPvktdBTlCaFZA5AbdgX4nVZCPJrOdxj1pZAeaM18ia53FeL01aTanSO0QE1p5ZCPlChfiTNyXhxasve8ZBYBC00FyVz4iOYraaFjO0VrBNNVXGJ8l1ZCG31PZB646RgQJEew8KB75j2iA3DWFzhGaMShgaaIGSvXQ7MzUyv2lvSLvlq7vOXZBeb5Ek3BU4yBPHFTYXWdrpHNcV7hTkjVMP1h2ZBcQPFwpbE8suwG2o7ZA232s9U"
+      ]
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": false,
+    "ccdScheduledTasksEnabled": false,
+    "sidebarMode": "chat",
+    "coworkWebSearchEnabled": true,
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      }
+    }
+  }
+}
